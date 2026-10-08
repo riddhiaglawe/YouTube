@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: youtube-backend-server
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: DB_URL
+        sync: false
